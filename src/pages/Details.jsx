@@ -5,8 +5,7 @@ import { useNavigate, useParams } from "react-router-dom"
 export default function Details({data}) {
     const {pays} = useParams()
     const navigate = useNavigate()
-    const [pays_local,setPays_local] = useState(data.find(el=>el.cca3 === pays))
-    console.log(pays_local);
+    const pays_local = data.find(el=>el.cca3 === pays)
     
     // pays_local?.borders.forEach(el => {
     //     const border = data.find(el2=>el2.cca3 === el)
@@ -41,7 +40,7 @@ export default function Details({data}) {
                         <div>
                             <label htmlFor="">Border Countries</label>
                             {pays_local.borders.map(el=>(
-                                <button onClick={()=>navigate(`/details/${el}`)}>{el.el}</button>
+                                <button key={el} onClick={()=>navigate(`/details/${el}`)}>{el}</button>
                             ))}
                         </div>
                     </div>
