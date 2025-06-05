@@ -1,1 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
+footer {
+  background-color: lightgray;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  align-items: center;
+}
+nav span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+nav button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=index.css.map */

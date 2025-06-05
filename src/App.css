@@ -6,31 +6,62 @@
 }
 
 .Card {
-  height: 300px;
-  width: 200px;
+  height: 355px;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
 }
 .Card .cardTop {
   width: 100%;
-  height: 50%;
+  height: 175px;
 }
 .Card .cardTop img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .Card .cardBot {
   width: 100%;
-  height: 50%;
-  padding: 20px;
+  height: 160px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .Card .cardBot .titre {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
 }
 .Card .cardBot .cardInfos {
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 14px;
-  font-weight: lighter;
+  position: absolute;
+  bottom: 20px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.Home {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Home .allPays {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(auto-fit, 375px);
+  gap: 20px;
 }
 
 footer {
@@ -41,6 +72,25 @@ footer {
   justify-content: center;
   align-items: center;
   color: gray;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  align-items: center;
+}
+nav span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+nav button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=App.css.map */
