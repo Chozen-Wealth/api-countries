@@ -9,10 +9,11 @@ import Layout from './pages/Layout'
 function App() {
 
   const [data, setData] = useState([])
+  const [darkMode,setDarkMode] = useState(true)
 
-
-
-
+  function togleMode() {
+    setDarkMode(!darkMode)
+  }
 
   // Importation de l'API
   useEffect(()=> {
@@ -26,7 +27,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='/' element={<Layout darkMode={darkMode} togleMode={togleMode}/>}>
           <Route index element={<Home data={data} setData={setData} />} />
           <Route path='/details/:pays' element={<Details data={data}/>} />
         </Route>
