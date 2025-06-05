@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 
 export default function Layout({darkMode,togleMode}) {
     return(
-        <div className={darkMode===true?'dark Layout':'Layout'}>
-            <Nav togleMode={togleMode}/>
+        <div className={darkMode?'dark Layout':'Layout'}>
+            <Nav togleMode={togleMode} darkMode={darkMode}/>
             <Outlet />
             <Footer />
         </div>

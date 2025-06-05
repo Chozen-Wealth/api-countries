@@ -216,6 +216,7 @@ nav button {
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .dark {
@@ -250,16 +251,34 @@ nav button {
 }
 .dark .Card {
   background-color: rgb(59, 51, 51);
+  color: rgb(255, 255, 255);
 }
-
-footer {
-  background-color: lightgray;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: gray;
+.dark .Card .cardInfos {
+  color: lightgray !important;
+}
+.dark footer {
+  background-color: rgb(41, 36, 36);
+  color: lightgray;
+}
+.dark .divRetour button {
+  background-color: rgb(59, 51, 51) !important;
+  color: rgb(255, 255, 255);
+}
+.dark .divRetour button svg {
+  fill: rgb(255, 255, 255);
+}
+.dark .divRetour button:hover {
+  filter: brightness(1.2);
+}
+.dark #details {
+  color: rgb(255, 255, 255);
+}
+.dark #details .divBorders .btnBorders {
+  background-color: rgb(59, 51, 51) !important;
+  color: rgb(255, 255, 255);
+}
+.dark #details .divBorders .btnBorders:hover {
+  filter: brightness(1.2);
 }
 
 /*# sourceMappingURL=index.css.map */
