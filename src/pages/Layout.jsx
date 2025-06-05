@@ -3,10 +3,10 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 
-export default function Layout() {
+export default function Layout({darkMode,togleMode}) {
     return(
-        <div className='Layout'>
-            <Nav />
+        <div className={darkMode?'dark Layout':'Layout'}>
+            <Nav togleMode={togleMode} darkMode={darkMode}/>
             <Outlet />
             <Footer />
         </div>
