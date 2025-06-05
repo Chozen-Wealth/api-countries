@@ -5,32 +5,184 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: rgb(250, 250, 250);
+}
+
 .Card {
-  height: 300px;
-  width: 200px;
+  height: 355px;
+  width: 300px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.Card:hover {
+  transform: scale(105%);
 }
 .Card .cardTop {
   width: 100%;
-  height: 50%;
+  height: 175px;
 }
 .Card .cardTop img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .Card .cardBot {
   width: 100%;
-  height: 50%;
-  padding: 20px;
+  height: 160px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .Card .cardBot .titre {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
 }
 .Card .cardBot .cardInfos {
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 14px;
-  font-weight: lighter;
+  position: absolute;
+  bottom: 20px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.Home {
+  width: 100%;
+  padding: 100px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Home .divFiltres {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.Home .divFiltres .divInput {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 40%;
+  gap: 10px;
+}
+.Home .divFiltres .divInput svg {
+  fill: rgba(0, 0, 0, 0.5);
+}
+.Home .divFiltres .divInput input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.Home .divFiltres .divInput input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.Home .divFiltres select {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.Home .allPays {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(auto-fit, 375px);
+  gap: 20px;
+}
+
+#details {
+  padding: 50px;
+  padding-bottom: 150px;
+  height: calc(100vh - 90px);
+}
+#details .divRetour {
+  padding-bottom: 50px;
+}
+#details .divRetour button {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+#details .divRetour button svg {
+  transform: scaleY(80%);
+}
+#details .divDetails {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+#details .divDetails .divImg {
+  width: 50%;
+  height: 400px;
+}
+#details .divDetails .divImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#details .divDetails .divDetailsInfos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#details .divDetails .divDetailsInfos .detailsInfos {
+  display: flex;
+  justify-content: space-between;
+}
+#details .divDetails .divDetailsInfos .detailsInfos .detailsInfosGauche {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#details .divDetails .divDetailsInfos .detailsInfos .detailsInfosDroite {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#details .divDetails .divDetailsInfos .divBorders {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#details .divDetails .divDetailsInfos .divBorders .btnBorders {
+  padding: 3px 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border: none;
 }
 
 footer {
@@ -46,8 +198,11 @@ footer {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding-inline: 2rem;
+  height: 90px;
   align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 nav span {
   font-size: 1.5rem;
