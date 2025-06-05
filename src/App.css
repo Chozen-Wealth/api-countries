@@ -83,13 +83,14 @@ body {
   padding-right: 30px;
   width: 40%;
   gap: 10px;
+  height: 70px;
 }
 .Home .divFiltres .divInput svg {
   fill: rgba(0, 0, 0, 0.5);
 }
 .Home .divFiltres .divInput input {
   width: 100%;
-  padding: 5px;
+  padding: 20px;
   border: none;
   outline: none;
   font-size: 16px;
@@ -97,12 +98,30 @@ body {
 .Home .divFiltres .divInput input::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
-.Home .divFiltres select {
+.Home .divFiltres .divSelectFav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Home .divFiltres .divSelectFav > button {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.Home .divFiltres .divSelectFav > button:active {
+  transform: scale(90%);
+}
+.Home .divFiltres .divSelectFav select {
   padding: 20px;
   border-radius: 10px;
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   outline: none;
+  cursor: pointer;
 }
 .Home .allPays {
   width: 100%;
