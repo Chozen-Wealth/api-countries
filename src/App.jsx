@@ -21,13 +21,14 @@ function App() {
       .then(response => setData(response.data))
       .catch(error => console.log(error))
   },[])
+  
 
   return (
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/details/:id' element={<Details />} />
+          <Route path='/details/:pays' element={<Details data={data}/>} />
         </Route>
       </Routes>
     </>
