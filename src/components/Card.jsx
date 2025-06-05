@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom"
 
 
-export default function Card({population, region, capital, pays, drapeau}) {
+export default function Card({cca3 ,population, region, capital, pays, drapeau}) {
+
+    const navigate = useNavigate()
+
     return(
-        <div className="Card">
+        <div onClick={()=> navigate(`/details/${cca3}`)} className="Card">
             <div className="cardTop">
                 <img src={drapeau} alt="" />
             </div>
