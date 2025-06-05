@@ -17,6 +17,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: 0.2s ease;
+  background-color: rgb(255, 255, 255);
 }
 .Card:hover {
   transform: scale(105%);
@@ -29,18 +30,28 @@ body {
 .Card .cardTop img {
   width: 100%;
   height: 100%;
+  border-radius: 0px 15px 0px 0px;
   object-fit: cover;
 }
-.Card .cardTop svg {
+.Card .cardTop .divHeart {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  transform: scaleY(90%) scale(110%);
-  fill: rgba(255, 187, 187, 0.5);
+  top: -1px;
+  right: -1px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 0px 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
-.Card .cardTop svg.active {
-  fill: rgb(255, 37, 37);
-  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
+.Card .cardTop .divHeart svg {
+  transform: scaleY(90%) scale(110%);
+  fill: #cbcbcb;
+}
+.Card .cardTop .divHeart.active svg {
+  fill: red;
 }
 .Card .cardBot {
   width: 100%;
@@ -87,7 +98,7 @@ body {
 .Home .divFiltres .divInput {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
@@ -154,7 +165,7 @@ body {
 }
 #details .divRetour button {
   padding: 10px 20px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -213,7 +224,7 @@ body {
 }
 #details .divDetails .divDetailsInfos .divBorders .btnBorders {
   padding: 3px 20px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border: none;
@@ -268,7 +279,7 @@ nav {
   padding-inline: 2rem;
   height: 90px;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 nav span {
@@ -282,6 +293,79 @@ nav button {
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: rgb(49, 43, 43);
+}
+.dark nav {
+  background-color: rgb(59, 51, 51);
+  color: rgb(255, 255, 255);
+}
+.dark nav button {
+  color: rgb(255, 255, 255);
+}
+.dark nav button svg {
+  fill: rgb(255, 255, 255);
+}
+.dark .Home .divFiltres .divInput {
+  background-color: rgb(59, 51, 51);
+}
+.dark .Home .divFiltres input {
+  background-color: rgb(59, 51, 51);
+  color: lightgray;
+}
+.dark .Home .divFiltres input::placeholder {
+  color: rgba(211, 211, 211, 0.5) !important;
+}
+.dark .Home .divFiltres svg {
+  fill: rgba(211, 211, 211, 0.5) !important;
+}
+.dark .Home .divFiltres .divSelectFav > button {
+  background-color: rgb(59, 51, 51) !important;
+  color: lightgray !important;
+}
+.dark .Home select {
+  background-color: rgb(59, 51, 51);
+  color: lightgray;
+}
+.dark .Card {
+  background-color: rgb(59, 51, 51);
+  color: rgb(255, 255, 255);
+}
+.dark .Card .cardInfos {
+  color: lightgray !important;
+}
+.dark .Card .divHeart {
+  background-color: rgb(59, 51, 51);
+}
+.dark footer {
+  background-color: rgb(41, 36, 36);
+  color: lightgray;
+}
+.dark .Favoris {
+  color: rgb(255, 255, 255);
+}
+.dark .divRetour button {
+  background-color: rgb(59, 51, 51) !important;
+  color: rgb(255, 255, 255);
+}
+.dark .divRetour button svg {
+  fill: rgb(255, 255, 255);
+}
+.dark .divRetour button:hover {
+  filter: brightness(1.2);
+}
+.dark #details {
+  color: rgb(255, 255, 255);
+}
+.dark #details .divBorders .btnBorders {
+  background-color: rgb(59, 51, 51) !important;
+  color: rgb(255, 255, 255);
+}
+.dark #details .divBorders .btnBorders:hover {
+  filter: brightness(1.2);
 }
 
 /*# sourceMappingURL=App.css.map */
