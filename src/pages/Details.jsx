@@ -8,10 +8,10 @@ export default function Details({data}) {
     const [pays_local,setPays_local] = useState(data.find(el=>el.cca3 === pays))
     console.log(pays_local);
     
-    pays_local?.borders.forEach(el => {
-        const border = data.find(el2=>el2.cca3 === el)
-        setPays_local(...pays_local,el=border.name)
-    });
+    // pays_local?.borders.forEach(el => {
+    //     const border = data.find(el2=>el2.cca3 === el)
+    //     setPays_local({...pays_local,el:border.name})
+    // });
     
     return(
 
