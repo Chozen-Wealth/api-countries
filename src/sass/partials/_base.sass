@@ -25,10 +25,20 @@ body
     .cardTop
         width: 100%
         height: 175px
+        position: relative
         img
             width: 100%
             height: 100%
             object-fit: cover
+        svg
+            position: absolute
+            top: 10px
+            right: 10px
+            transform: scaleY(90%) scale(110%)
+            fill: rgba(255, 187, 187, 0.5)
+            &.active
+                fill: rgb(255, 37, 37)
+                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3))
     .cardBot
         width: 100%
         height: 160px
@@ -120,7 +130,7 @@ body
     
 // Page détails
 #details
-    padding: 50px
+    padding: 50px 100px 50px 100px
     padding-bottom: 150px
     height: calc( 100vh - 90px )
     .divRetour
@@ -181,7 +191,35 @@ body
                     border-radius: 5px
                     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15)
                     border: none
-                    cursor: pointer   
+                    cursor: pointer  
+
+// Page des favoris
+.Favoris
+    padding: 50px 100px 50px 100px
+    min-height: calc(100vh - 90px)
+    .divRetour
+        padding-bottom: 50px
+        button
+            padding: 10px 20px
+            background-color: white
+            border: none
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+            border-radius: 10px
+            font-size: 16px
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 5px
+            cursor: pointer
+            svg
+                transform: scaleY(80%)
+    .listeFavoris
+        width: 100%
+        display: grid
+        justify-content: space-between
+        grid-template-columns: repeat(4, 300px)
+        grid-template-rows: repeat(auto-fit, 375px)
+        gap: 20px
 
 
 // Footer

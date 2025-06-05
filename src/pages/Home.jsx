@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Card from "../components/Card";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
-export default function Home({data, setData}) {
+export default function Home({data, setData, favoris, setFavoris}) {
+
+    const navigate = useNavigate()
 
     const [selectedRegion, setSelectedRegion] = useState("")
     const [recherche, setRecherche] = useState("")
@@ -24,7 +26,7 @@ export default function Home({data, setData}) {
                     <input onChange={(e)=> setRecherche(e.target.value)} type="search" name="" id="" placeholder="Search for a country..."/>
                 </div>
                 <div className="divSelectFav">
-                    <button>Favoris</button>
+                    <button onClick={()=> navigate("/favoris")} >Favoris</button>
                     <select name="" id="" value={selectedRegion} onChange={handleChange}>
                         <option value="" disabled hidden>Filter by Region</option>
                         <option value="">All</option>
@@ -38,7 +40,7 @@ export default function Home({data, setData}) {
             </div>
             <div className="allPays">
                 {data ? (dataFiltre.map(element => (
-                    <Card key={element.cca3} cca3={element.cca3} drapeau={element.flags.png} pays={element.name.common} population={element.population} region={element.region} capital={element.capital} />
+                    <Card key={element.cca3} cca3={element.cca3} drapeau={element.flags.png} pays={element.name.common} population={element.population} region={element.region} capital={element.capital} favoris={favoris} setFavoris={setFavoris} />
                 ))) : "Loading..."}
             </div>
         </div>
