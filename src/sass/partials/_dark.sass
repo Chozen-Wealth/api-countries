@@ -1,0 +1,63 @@
+@use './_variables' as *
+@use './_mixins' as *
+
+// générale
+.dark
+    background-color: $noirFoncer
+    // nav
+    nav
+        background-color: $noirClaire   
+        color: $blanc
+        button
+            color: $blanc
+            svg
+                fill: $blanc
+
+    // Home
+    .Home   
+        .divFiltres
+            .divInput
+                background-color: $noirClaire
+            input
+                background-color: $noirClaire
+                color: $gris
+            input::placeholder
+                color: rgba($gris, 0.5) !important
+            svg
+                fill: rgba($gris, 0.5) !important
+
+        select
+            background-color: $noirClaire
+            color: $gris
+    .Card
+        background-color: $noirClaire
+        color: $blanc
+        .cardInfos
+            color: $gris !important
+    // Footer
+    footer
+        background-color: $noirFoncer_extra 
+        color: $gris
+
+
+    .divRetour
+        button
+            background-color: $noirClaire !important
+            color: $blanc
+            svg
+                fill: $blanc
+            &:hover
+                filter: brightness(1.2)
+
+
+    #details
+        color: $blanc
+        .divBorders
+            .btnBorders
+                background-color: $noirClaire !important
+                color: $blanc
+                &:hover
+                    filter: brightness(1.2)
+
+
+    

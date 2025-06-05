@@ -20,7 +20,6 @@ export default function Details({data}) {
             borders: borderCountries || []
         });
     }, [data, pays]);
-    console.log(pays_local);
     
     
     
