@@ -26,7 +26,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home data={data} setData={setData} />} />
           <Route path='/details/:id' element={<Details />} />
         </Route>
       </Routes>
