@@ -12,7 +12,8 @@ export default function Home({data, setData}) {
         setSelectedRegion(e.target.value);
     }
 
-    const dataRegion = data.filter(element => element.region.toLowerCase().includes(selectedRegion.toLowerCase()))
+    const fckIsrael = data.filter(element => element.cca3 !== "ISR")
+    const dataRegion = fckIsrael.filter(element => element.region.toLowerCase().includes(selectedRegion.toLowerCase()))
     const dataFiltre = dataRegion.filter(element => element.name.common.toLowerCase().includes(recherche.toLowerCase()))
 
     return(
