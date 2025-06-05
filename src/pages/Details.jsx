@@ -13,34 +13,37 @@ export default function Details({data}) {
     // });
     
     return(
-
         <section id="details">
             {pays_local
             ?(
                 <>
-                <div>
-                    <button onClick={()=>navigate('/')}>Back</button>
+                <div className="divRetour">
+                    <button onClick={()=>navigate('/')}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>Back</button>
                 </div>
-                <div>
-                    <div>
+                <div className="divDetails">
+                    <div className="divImg">
                         <img src={pays_local.flags.svg} alt={pays_local.flags.alt} />
                     </div>
-                    <div>
+                    <div className="divDetailsInfos">
                         <h2>{pays_local.name.common}</h2>
-                        <div>
-                            <p>Native Name: <span>{pays_local.name.common}</span></p>
-                            <p>Population: <span>{pays_local.population}</span></p>
-                            <p>Region: <span>{pays_local.region}</span></p>
-                            <p>Sub Region: <span>{pays_local.subregion}</span></p>
-                            <p>Capital: <span>{pays_local.capital}</span></p>
-                            <p>Top Level Domain: <span>{pays_local.tld}</span></p>
-                            <p>Currencies: <span>{pays_local.currencies.name}</span></p>
-                            <p>Languages: <span>{pays_local.languages.mkd}</span></p>
+                        <div className="detailsInfos">
+                            <div className="detailsInfosGauche">
+                                <p><b>Native Name:</b> <span>{pays_local.name.common}</span></p>
+                                <p><b>Population:</b> <span>{pays_local.population}</span></p>
+                                <p><b>Region:</b> <span>{pays_local.region}</span></p>
+                                <p><b>Sub Region:</b> <span>{pays_local.subregion}</span></p>
+                                <p><b>Capital:</b> <span>{pays_local.capital}</span></p>
+                            </div>
+                            <div className="detailsInfosDroite">
+                                <p><b>Top Level Domain:</b> <span>{pays_local.tld}</span></p>
+                                <p><b>Currencies:</b> <span>{pays_local.currencies.name}</span></p>
+                                <p><b>Languages:</b> <span>{pays_local.languages.mkd}</span></p>
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor="">Border Countries</label>
+                        <div className="divBorders">
+                            <label htmlFor=""><b>Border Countries : </b></label>
                             {pays_local.borders.map(el=>(
-                                <button key={el} onClick={()=>navigate(`/details/${el}`)}>{el}</button>
+                                <button className="btnBorders" key={el} onClick={()=>navigate(`/details/${el}`)}>{el}</button>
                             ))}
                         </div>
                     </div>

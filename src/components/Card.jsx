@@ -13,7 +13,7 @@ export default function Card({cca3 ,population, region, capital, pays, drapeau})
             <div className="cardBot">
                 <span className="titre">{pays}</span>
                 <div className="cardInfos">
-                    <span className="population"><b>Population :</b> {population}</span>
+                    <span className="population"><b>Population :</b> {population.toLocaleString("en-EN")}</span>
                     <span className="region"><b>Region :</b> {region}</span>
                     <span className="capital"><b>Capital :</b> {capital}</span>
                 </div>
