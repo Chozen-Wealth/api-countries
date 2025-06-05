@@ -1,16 +1,30 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
 
 export default function Details({data}) {
     const {pays} = useParams()
     const navigate = useNavigate()
-    const pays_local = data.find(el=>el.cca3 === pays)
+    const [pays_local, setPays_local] = useState()
     
-    // pays_local?.borders.forEach(el => {
-    //     const border = data.find(el2=>el2.cca3 === el)
-    //     setPays_local({...pays_local,el:border.name})
-    // });
+    useEffect(() => {
+        const country = data.find(el => el.cca3 === pays);
+        if (!country) return;
+
+        const borderCountries = country.borders?.map(code => {
+            return { cca3: code ,name: data.find(el2 => el2.cca3 === code).name.common};
+        }).filter(Boolean);
+
+        setPays_local({
+            ...country,
+            borders: borderCountries || []
+        });
+    }, [data, pays]);
+    console.log(pays_local);
+    
+    
+    
+    
     
     return(
         <section id="details">
@@ -43,7 +57,7 @@ export default function Details({data}) {
                         <div className="divBorders">
                             <label htmlFor=""><b>Border Countries : </b></label>
                             {pays_local.borders.map(el=>(
-                                <button className="btnBorders" key={el} onClick={()=>navigate(`/details/${el}`)}>{el}</button>
+                                <button className="btnBorders" key={el.cca3} onClick={()=>navigate(`/details/${el.cca3}`)}>{el.name}</button>
                             ))}
                         </div>
                     </div>
