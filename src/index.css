@@ -156,9 +156,19 @@ body {
 }
 
 #details {
-  padding: 50px 100px 50px 100px;
-  padding-bottom: 150px;
+  padding: 50px 100px 0px 100px;
   height: calc(100vh - 90px);
+}
+#details .map {
+  width: 47%;
+  padding-top: 2rem;
+  border-radius: 20px;
+}
+#details .map iframe {
+  border-radius: 12px;
+  border: none;
+  height: 20vh;
+  width: 100%;
 }
 #details .divRetour {
   padding-bottom: 50px;

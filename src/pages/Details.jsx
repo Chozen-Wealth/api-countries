@@ -22,7 +22,7 @@ export default function Details({data}) {
     }, [data, pays]);
     
     const nomPays = pays_local?.name.common;
-    const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(nomPays)}&z=4&output=embed`;
+    const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(nomPays)}&output=embed`;
     
 
     return(
@@ -66,7 +66,7 @@ export default function Details({data}) {
                     </div>
                 </div>
                 <div className="map">
-                    <iframe src={embedUrl} frameborder="0"></iframe>
+                    <iframe src={embedUrl}></iframe>
                 </div>
                 </>
                 )
