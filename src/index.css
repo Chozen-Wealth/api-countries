@@ -216,6 +216,17 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+#details .divDetails .divDetailsInfos .detailsInfos .detailsInfosDroite .currenciesDetails {
+  display: flex;
+  gap: 10px;
+}
+#details .divDetails .divDetailsInfos .detailsInfos .detailsInfosDroite .langueDetails {
+  display: flex;
+  gap: 10px;
+}
+#details .divDetails .divDetailsInfos .detailsInfos .detailsInfosDroite li {
+  list-style: none;
+}
 #details .divDetails .divDetailsInfos .divBorders {
   width: 100%;
   display: flex;
