@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 export default function Nav({togleMode,darkMode}) {
 
@@ -7,6 +7,9 @@ export default function Nav({togleMode,darkMode}) {
         <nav>
             <div>
                 <span>Where in the world ?</span>
+            </div>
+            <div>
+                <Link to={'/Quiz'}></Link>
             </div>
             <div>
                 <button onClick={()=>{togleMode()}}>

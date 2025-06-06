@@ -23,6 +23,7 @@ function App() {
       .then(response => setData(response.data))
       .catch(error => console.log(error))
   },[])
+  console.log(data);
   
 
   return (
@@ -30,8 +31,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout darkMode={darkMode} togleMode={togleMode}/>}>
           <Route index element={<Home data={data} setData={setData} favoris={favoris} setFavoris={setFavoris} />} />
-          <Route path='/details/:pays' element={<Details data={data}/>} />
-          <Route path='/favoris' element={<Favoris data={data} favoris={favoris} setFavoris={setFavoris} />} />
+          <Route path='details/:pays' element={<Details data={data}/>} />
+          <Route path='favoris' element={<Favoris data={data} favoris={favoris} setFavoris={setFavoris} />} />
+          <Route path='Quiz' element={<Favoris data={data} />} />
         </Route>
       </Routes>
     </>
