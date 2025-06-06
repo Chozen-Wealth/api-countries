@@ -16,7 +16,7 @@ export default function Favoris({data, favoris, setFavoris}) {
             <div className="listeFavoris">
 
             {data ? favoris.length > 0 ? (favs.map(element => (
-                <Card key={element.cca3} cca3={element.cca3} population={element.population} region={element.region} capital={element.capital} drapeau={element.flags.png} pays={element.name.common} favoris={favoris} setFavoris={setFavoris} />
+                <Card key={element.cca3} cca3={element.cca3} population={element.population} region={element.region} capital={element.capital} drapeau={element.flags.png} pays={element.name.common} favoris={favoris} setFavoris={setFavoris} drapeauAlt={element.flags.alt} />
             ))): "Pas de pays mis en favoris." : ""}
             </div>
         </div>

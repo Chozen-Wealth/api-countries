@@ -49,10 +49,10 @@ export default function Details({data}) {
                             <div className="detailsInfosDroite">
                                 <p><b>Top Level Domain:</b> <span>{pays_local.tld}</span></p>
                                 <div className="currenciesDetails">
-                                    <p><b>Currencies:</b> </p><ul>{Object.values(pays_local.currencies).map((valeur,index)=>(<li key={index}>- {valeur.name}</li>))}</ul>
+                                    <p><b>Currencies:</b> </p><ul>{Object.values(pays_local.currencies).map((valeur,index)=>(<li key={index}>{valeur.name}</li>))}</ul>
                                 </div>
                                 <div className="langueDetails">
-                                    <p><b>Languages:</b> </p><ul>{Object.values(pays_local.languages&&pays_local.languages).map((valeur)=>(<li key={valeur}>- {valeur}</li>))}</ul>
+                                    <p><b>Languages:</b> </p><ul>{Object.values(pays_local.languages&&pays_local.languages).map((valeur)=>(<li key={valeur}>{valeur}</li>))}</ul>
                                 </div>
                             </div>
                         </div>
