@@ -23,8 +23,7 @@ export default function Details({data}) {
     
     
     
-    
-    
+
     return(
         <section id="details">
             {pays_local
@@ -49,8 +48,12 @@ export default function Details({data}) {
                             </div>
                             <div className="detailsInfosDroite">
                                 <p><b>Top Level Domain:</b> <span>{pays_local.tld}</span></p>
-                                <p><b>Currencies:</b> <span>{pays_local.currencies.name}</span></p>
-                                <p><b>Languages:</b> <span>{pays_local.languages.mkd}</span></p>
+                                <div className="currenciesDetails">
+                                    <p><b>Currencies:</b> </p><ul>{Object.values(pays_local.currencies).map((valeur,index)=>(<li key={index}>- {valeur.name}</li>))}</ul>
+                                </div>
+                                <div className="langueDetails">
+                                    <p><b>Languages:</b> </p><ul>{Object.values(pays_local.languages&&pays_local.languages).map((valeur)=>(<li key={valeur}>- {valeur}</li>))}</ul>
+                                </div>
                             </div>
                         </div>
                         <div className="divBorders">
