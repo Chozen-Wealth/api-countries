@@ -4,6 +4,7 @@ export default function Quiz({data}){
     const listePays = data?.map(el => ({nom: el.name.common,flag: el.flags}))
     const [question, setQuestion] = useState([])
     const [partie,setPartie] = useState({vie:10,score:0,victoire:0,defaite:0})
+    const [reponse,setReponse] = useState()
 
     useEffect(() => {
         const start = () => {
@@ -36,30 +37,19 @@ export default function Quiz({data}){
                     <img src={q.bonneReponse.flags.svg} alt={`Drapeau de ${q.bonneReponse.flags.alt}`} />
                     <div>
                         {q.reponses.map((rep, idx) => (
-                            <label key={idx}>
-                            <input
-                                type="radio"
-                                name={`question-${i}`}
-                                value={rep}
-                                checked={reponsesUtilisateur[i] === rep}
-                                onChange={() => handleChange(i, rep)}
-                                required
-                            />{" "}
-                            {rep}
-                            </label>
+                            <button value={rep} onClick={(e)=>(
+                                setReponse(e.target.value)
+                            )}>{rep}</button>
                         ))}
                     </div>
                 </div>
                 ))}
 
-                <button type="submit">Valider</button>
             </form>
 
-            {score !== null && (
                 <p>
-                Ton score est {score} / {questions.length}
+                Ton score est {score} / {question.length}
                 </p>
-            )}
             </section>
 
     )
