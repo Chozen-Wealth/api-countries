@@ -8,9 +8,6 @@ export default function Nav({togleMode,darkMode}) {
             <div>
                 <span>Where in the world ?</span>
             </div>
-            {/* <div>
-                <Link to={'/Quiz'}></Link>
-            </div> */}
             <div>
                 <button onClick={()=>{togleMode()}}>
                     {!darkMode
