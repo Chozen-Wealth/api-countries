@@ -7,7 +7,7 @@ import Resultat from "../components/resultat";
 export default function Quiz({data}){
     // console.log(data&&data);
     
-    const listePays = data?.map((el) => ({nom: el.name.official,flag: el.flags}))
+    const listePays = data?.map((el) => ({nom: el.name.common,flag: el.flags}))
     const [question, setQuestion] = useState([])
     const [comp,setComp] = useState(0)
     const [partie,setPartie] = useState({score:0,victoire:0,defaite:0,question:0})
