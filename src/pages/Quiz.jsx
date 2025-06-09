@@ -51,18 +51,11 @@ export default function Quiz({data}){
 
     return(
         <section id="quiz">
+
+
             {question?.length > 0 ? 
             <>
-                <div className="questinaire">
-                    {question[partie.question] != undefined ?
-                    <>
-                    {comp===0&&(<Question partie={partie} question={question[partie.question]} check_reponse={check_reponse} />)}
-                    {comp===1&&(<BonneReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant}/>)}
-                    {comp===2&&(<MauvaiseReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant} />)}
-                    </>
-                    :<Resultat partie={partie} restart={start} question={question} setPartie={setPartie}/>}
-                    
-                </div>
+                {/* Div du score */}
                 <div className="score">
                     <p>Ton score est {partie.score} / {question.length}</p>
                     <div className="total">
@@ -70,11 +63,23 @@ export default function Quiz({data}){
                         <p> tu as perdu {partie.defaite} parties</p>
                     </div>
                 </div>
+
+                {/* Questionnaire box avec les questions et le pays */}
+                <div className="questionnaire">
+                    {question[partie.question] != undefined ?
+                    <>
+                    {comp===0&&(<Question partie={partie} question={question[partie.question]} check_reponse={check_reponse} />)}
+                    {comp===1&&(<BonneReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant}/>)}
+                    {comp===2&&(<MauvaiseReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant} />)}
+                    </>
+                    :<Resultat partie={partie} restart={start} question={question} setPartie={setPartie}/>}
+                </div>
+
             </>
             :
-            <p>chargement</p>
-            
-            }
+            <p>chargement...</p>}
+
+
         </section>
 
     )

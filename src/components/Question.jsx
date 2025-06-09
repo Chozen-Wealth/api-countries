@@ -1,7 +1,7 @@
 export default function Question({question,check_reponse}){
 
     return(
-        <div className="questionniare">
+        <div className="questionnaire">
             <h3>Quel est ce pays ?</h3>
             <div className="question">
                 <div className="divImg">
