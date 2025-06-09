@@ -30,7 +30,36 @@ nav
         gap: 0.5rem
         font-size: 1rem
         cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        // border: 1px solid black
+        padding: 5px
         &:hover
             color: $grisPur
             svg
                 fill: $grisPur
+    .navDivMenu
+        display: none
+        align-items: center
+        gap: 10px
+        > div
+            display: flex
+            justify-content: center
+            align-items: center
+            // border: 1px solid black
+            padding: 5px
+            cursor: pointer
+            > svg
+                fill: black
+
+
+@media (max-width: 1040px)
+    nav
+        gap: 20px
+        .link
+            display: none
+        .divDarkmode
+            display: none
+        .navDivMenu
+            display: flex
