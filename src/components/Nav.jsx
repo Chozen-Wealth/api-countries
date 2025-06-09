@@ -1,7 +1,10 @@
+import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 
 export default function Nav({togleMode,darkMode}) {
 
+
+    const [menu, setMenu] = useState(false)
     
     return(
         <nav>
@@ -44,11 +47,21 @@ export default function Nav({togleMode,darkMode}) {
                     </>
                     )}
                 </button>
-                <div>
+                <div onClick={()=> setMenu(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 </div>
             </div>
-
+            {menu ? (
+                <div className="Menu">
+                    <div onClick={()=> setMenu(false)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                    </div>
+                    <div className="link">
+                        <NavLink to={'/'}>Drapeau</NavLink>
+                        <NavLink to={'/Quiz'}>Quiz</NavLink>
+                    </div>
+                </div>
+            ) : ""}
         </nav>
     )
 }

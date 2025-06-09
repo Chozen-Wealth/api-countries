@@ -438,6 +438,41 @@ nav .navDivMenu > div {
 nav .navDivMenu > div > svg {
   fill: black;
 }
+nav .Menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 40px;
+  background-color: white;
+  position: fixed;
+  top: 20px;
+  right: 0px;
+  width: 200px;
+  height: 175px;
+  gap: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border-radius: 10px 0px 0px 10px;
+}
+nav .Menu .link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 50px;
+  gap: 10px;
+}
+nav .Menu > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+nav .Menu > div svg {
+  fill: black;
+}
 
 @media (max-width: 1040px) {
   nav {
