@@ -12,31 +12,30 @@ export default function Quiz({data}){
     const [comp,setComp] = useState(0)
     const [partie,setPartie] = useState({vie:10,score:0,victoire:0,defaite:0,question:0})
 
-    useEffect(() => {
-        const start = () => {
-            setPartie({...partie,score:0,question:0})
-            const listeQuestion = [];
-            if (listePays.length<=0){
-                return
+    function start() {
+        const listeQuestion = [];
+        if (listePays.length===0){
+            return;
+        }
+        for (let i = 0; i < 5; i++) {
+            const random = [...listePays].sort(() => 0.5 - Math.random());
+            const candidat = random[0];
+            if (listeQuestion.some(q => q.bonneReponse.nom === candidat.nom)) {
+                i--;
+                continue;
             }
-            for (let i = 0; i < 5; i++) {
-                    const random = [...listePays].sort(() => 0.5 - Math.random());
-                    const candidat = random[0];
-                    if (listeQuestion.some(q => q.bonneReponse.nom === candidat.nom)) {
-                        i--;
-                        continue;
-                    }
-                    listeQuestion.push({
-                    bonneReponse: candidat,
-                    reponses: [random[0].nom, random[1].nom, random[2].nom, random[3].nom].sort(() => 0.5 - Math.random()),
-                    });
-                }
-                return listeQuestion;
-            };
+            listeQuestion.push({
+                bonneReponse: candidat,
+                reponses: [random[0].nom, random[1].nom, random[2].nom, random[3].nom].sort(() => 0.5 - Math.random()),
+            });
+        }
 
-        setQuestion(start());
-    }, [data]);
-    console.log(question&&question);
+        setPartie(prev => ({ ...prev, score: 0, question: 0 }));
+        setQuestion(listeQuestion);
+    }
+    useEffect(()=>{
+        start()
+    },[data])
     
     function check_reponse(reponse){
         if(reponse===question[partie.question].bonneReponse.nom){
@@ -66,7 +65,7 @@ export default function Quiz({data}){
                 </div>
 
                 <p>Ton score est {partie.score} / {question.length}</p>
-                <p>tu as gagner {partie.victoire} partie / tu as perdu {partie.defaite} partie</p>
+                <p>tu as gagner {partie.victoire} parties / tu as perdu {partie.defaite} parties</p>
             </>
             :
             <p>chargement</p>
