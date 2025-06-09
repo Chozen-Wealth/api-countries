@@ -146,21 +146,16 @@ body
 // Page détails
 #details
     padding: 50px 100px 0px 100px
-    height: calc( 100vh - 90px )
+    min-height: calc( 100vh - 90px )
     .map
-        width: 47%
+        width: 100%
         padding-top: 2rem
         border-radius: 20px
         iframe
             border-radius: 12px
             border: none
             height: 20vh
-            width: 100%
-
-            
-            
-
-            
+            width: 100%    
     .divRetour
         padding-bottom: 50px
         button
@@ -191,7 +186,6 @@ body
             align-items: center
             img
                 width: 100%
-                
                 object-fit: cover
                 aspect-ratio: 16 / 9
         .divDetailsInfos
@@ -282,6 +276,10 @@ footer
         padding: 5%
         padding-top: 50px
         padding-bottom: 100px
+    #details
+        padding: 5%
+        padding-top: 50px
+        padding-bottom: 100px  
 
 @media (max-width:1400px)
     .Home
@@ -341,6 +339,44 @@ footer
                 font-size: 16px
             input::placeholder
                 color: rgba(0, 0, 0, 0.5)
+    #details
+        .divDetails
+            flex-direction: column
+            .divImg
+                width: 100%
+                height: fit-content
+            .divDetailsInfos
+                width: 100%
+                gap: 10px
+                .detailsInfos
+                    flex-direction: column
+                    gap: 30px
+                    margin-top: 20px
+                    .detailsInfosDroite
+                        .currenciesDetails
+                            display: flex
+                            gap: 10px
+                        .langueDetails
+                            display: flex
+                            gap: 10px
+                        li
+                            list-style: none
+                .divBorders
+                    margin-top: 30px
+                    width: 100%
+                    display: flex
+                    gap: 10px
+                    flex-wrap: wrap
+                    .btnBorders
+                        padding: 3px 20px
+                        background-color: $blanc
+                        border-radius: 5px
+                        box-shadow: 0px 0px 5px rgba($noir, 0.15)
+                        border: none
+                        cursor: pointer
+                        &:hover
+                            filter: brightness(0.8)
+
 
     
 @media (max-width:690px) 

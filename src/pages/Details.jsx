@@ -35,7 +35,7 @@ export default function Details({data}) {
                 </div>
                 <div className="divDetails">
                     <div className="divImg">
-                        <img src={pays_local.flags.png} alt={pays_local.flags.alt} />
+                        <img src={pays_local.flags.svg} alt={pays_local.flags.alt} />
                     </div>
                     <div className="divDetailsInfos">
                         <h2>{pays_local.name.common}</h2>
