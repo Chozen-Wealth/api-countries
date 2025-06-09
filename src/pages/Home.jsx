@@ -26,7 +26,7 @@ export default function Home({data, setData, favoris, setFavoris}) {
                     <input onChange={(e)=> setRecherche(e.target.value)} type="search" name="" id="" placeholder="Search for a country..."/>
                 </div>
                 <div className="divSelectFav">
-                    <button onClick={()=> navigate("/favoris")} >Favoris</button>
+                    <button onClick={()=> navigate("/favoris")} >Favorites</button>
                     <select name="" id="" value={selectedRegion} onChange={handleChange}>
                         <option value="" disabled hidden>Filter by Region</option>
                         <option value="">All</option>
