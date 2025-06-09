@@ -516,6 +516,15 @@ nav .Menu > div svg {
 .dark nav button:hover svg {
   fill: lightgray;
 }
+.dark nav .navDivMenu > div > svg {
+  fill: white;
+}
+.dark nav .Menu {
+  background-color: rgb(59, 51, 51);
+}
+.dark nav .Menu > div svg {
+  fill: white;
+}
 .dark .Home .divFiltres .divInput {
   background-color: rgb(59, 51, 51);
 }
