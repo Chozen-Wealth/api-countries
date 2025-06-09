@@ -35,9 +35,10 @@ export default function Quiz({data}){
 
         setQuestion(start());
     }, [data]);
+    console.log(question&&question);
     
     function check_reponse(reponse){
-        if(reponse===question[partie.question]){
+        if(reponse===question[partie.question].bonneReponse.nom){
             setComp(1)
         }else{
             setComp(2)
@@ -52,13 +53,13 @@ export default function Quiz({data}){
         <section id="quiz">
             {question?.length > 0 ? 
             <>
-                <form>
-                    {comp===0&&(<Question partie={partie} question={question[[partie.question]]} check_reponse={check_reponse} />)}
+                <div className="questinaire">
+                    {comp===0&&(<Question partie={partie} question={question[partie.question]} check_reponse={check_reponse} />)}
                     {comp===1&&(<BonneReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant}/>)}
-                    {comp===1&&(<MauvaiseReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant} />)}
+                    {comp===2&&(<MauvaiseReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant} />)}
                     
                     
-                </form>
+                </div>
 
                 <p>Ton score est {partie.score} / {question.length}</p>
                 <p>tu as gagner {partie.victoire} partie / tu as perdu {partie.defaite} partie</p>
