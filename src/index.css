@@ -156,13 +156,15 @@ body {
 }
 
 #details {
-  padding: 50px 100px 0px 100px;
+  padding: 50px 100px 50px 100px;
   min-height: calc(100vh - 90px);
 }
 #details .map {
   width: 100%;
   padding-top: 2rem;
   border-radius: 20px;
+  margin-top: 50px;
+  height: fit-content;
 }
 #details .map iframe {
   border-radius: 12px;
