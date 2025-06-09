@@ -9,6 +9,7 @@ export default function Nav({togleMode,darkMode}) {
                 <span>Where in the world ?</span>
             </div>
             <div>
+                <Link to={'/'}>Drapeau</Link>
                 <Link to={'/Quiz'}>Quiz</Link>
             </div>
             <div>
