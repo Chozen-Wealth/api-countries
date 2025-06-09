@@ -307,6 +307,20 @@ nav span {
   font-size: 1.5rem;
   font-weight: 700;
 }
+nav .link {
+  gap: 2rem;
+  display: flex;
+}
+nav .link a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+nav .link a:hover {
+  color: gray;
+}
+nav .link a.active {
+  color: gray;
+}
 nav button {
   background: none;
   border: none;
@@ -323,6 +337,15 @@ nav button {
 .dark nav {
   background-color: rgb(59, 51, 51);
   color: rgb(255, 255, 255);
+}
+.dark nav .link a {
+  color: rgb(255, 255, 255);
+}
+.dark nav .link a:hover {
+  color: lightgray;
+}
+.dark nav .link a.active {
+  color: lightgray;
 }
 .dark nav button {
   color: rgb(255, 255, 255);
