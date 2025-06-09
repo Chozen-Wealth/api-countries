@@ -11,7 +11,7 @@ function App() {
 
   const [data, setData] = useState([])
   const [favoris, setFavoris] = useState([])
-  const [darkMode,setDarkMode] = useState(true)
+  const [darkMode,setDarkMode] = useState(false)
 
   function togleMode() {
     setDarkMode(!darkMode)
