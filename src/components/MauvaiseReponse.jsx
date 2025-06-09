@@ -1,9 +1,6 @@
 import { useEffect } from "react"
 
-export default function MauvaiseReponse({partie,question,setPartie,suivant}){
-    useEffect(()=>{
-        setPartie({...partie,score: partie.score-1})
-    },[])
+export default function MauvaiseReponse({question,suivant}){
 
     return(
         <div>

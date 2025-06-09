@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Question from "../components/question";
 import BonneReponse from "../components/BonneReponse";
 import MauvaiseReponse from "../components/MauvaiseReponse";
+import Resultat from "../components/resultat";
 
 export default function Quiz({data}){
     console.log(data&&data);
@@ -54,10 +55,13 @@ export default function Quiz({data}){
             {question?.length > 0 ? 
             <>
                 <div className="questinaire">
+                    {question[partie.question] != undefined ?
+                    <>
                     {comp===0&&(<Question partie={partie} question={question[partie.question]} check_reponse={check_reponse} />)}
                     {comp===1&&(<BonneReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant}/>)}
                     {comp===2&&(<MauvaiseReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant} />)}
-                    
+                    </>
+                    :<Resultat partie={partie} restart={start}/>}
                     
                 </div>
 
