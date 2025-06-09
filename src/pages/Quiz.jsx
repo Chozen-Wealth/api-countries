@@ -60,7 +60,7 @@ export default function Quiz({data}){
                     {comp===1&&(<BonneReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant}/>)}
                     {comp===2&&(<MauvaiseReponse partie={partie} setComp={setComp} setPartie={setPartie} question={question[partie.question]} suivant={suivant} />)}
                     </>
-                    :<Resultat partie={partie} restart={start}/>}
+                    :<Resultat partie={partie} restart={start} question={question} setPartie={setPartie}/>}
                     
                 </div>
 
