@@ -1,5 +1,6 @@
 export default function Question({question,check_reponse}){
 
+
     return(
         <div className="questionnaire">
             <h3>Quel est ce pays ?</h3>

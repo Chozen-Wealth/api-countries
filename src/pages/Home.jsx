@@ -40,7 +40,7 @@ export default function Home({data, setData, favoris, setFavoris}) {
             </div>
             <div className="allPays">
                 {data ? (dataFiltre.map(element => (
-                    <Card key={element.cca3} cca3={element.cca3} drapeau={element.flags.png} pays={element.name.common} population={element.population} region={element.region} capital={element.capital} favoris={favoris} setFavoris={setFavoris} drapeauAlt={element.flags.alt} />
+                    <Card key={element.cca3} cca3={element.cca3} drapeau={element.flags.svg} pays={element.name.common} population={element.population} region={element.region} capital={element.capital} favoris={favoris} setFavoris={setFavoris} drapeauAlt={element.flags.alt} />
                 ))) : "Loading..."}
             </div>
         </div>
