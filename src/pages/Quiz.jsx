@@ -63,9 +63,10 @@ export default function Quiz({data}){
                     :<Resultat partie={partie} restart={start} question={question} setPartie={setPartie}/>}
                     
                 </div>
-
-                <p>Ton score est {partie.score} / {question.length}</p>
-                <p>tu as gagner {partie.victoire} parties / tu as perdu {partie.defaite} parties</p>
+                <div className="score">
+                    <p>Ton score est {partie.score} / {question.length}</p>
+                    <p>tu as gagner {partie.victoire} parties / tu as perdu {partie.defaite} parties</p>
+                </div>
             </>
             :
             <p>chargement</p>

@@ -186,6 +186,9 @@ body {
   gap: 5px;
   cursor: pointer;
 }
+#details .divRetour button:hover {
+  filter: brightness(0.8);
+}
 #details .divRetour button svg {
   transform: scaleY(80%);
 }
@@ -250,6 +253,9 @@ body {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border: none;
   cursor: pointer;
+}
+#details .divDetails .divDetailsInfos .divBorders .btnBorders:hover {
+  filter: brightness(0.8);
 }
 
 .Favoris {
@@ -330,6 +336,12 @@ nav button {
   font-size: 1rem;
   cursor: pointer;
 }
+nav button:hover {
+  color: gray;
+}
+nav button:hover svg {
+  fill: gray;
+}
 
 .dark {
   background-color: rgb(49, 43, 43);
@@ -352,6 +364,12 @@ nav button {
 }
 .dark nav button svg {
   fill: rgb(255, 255, 255);
+}
+.dark nav button:hover {
+  color: lightgray;
+}
+.dark nav button:hover svg {
+  fill: lightgray;
 }
 .dark .Home .divFiltres .divInput {
   background-color: rgb(59, 51, 51);
@@ -410,6 +428,24 @@ nav button {
 }
 .dark #details .divBorders .btnBorders:hover {
   filter: brightness(1.2);
+}
+
+.dark #quiz {
+  color: rgb(255, 255, 255);
+}
+
+#quiz {
+  color: rgb(0, 0, 0);
+  padding: 50px 100px 0px 100px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+#quiz button {
+  padding: 3px 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
