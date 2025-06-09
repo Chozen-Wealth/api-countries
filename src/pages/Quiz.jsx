@@ -10,7 +10,7 @@ export default function Quiz({data}){
     const listePays = data?.map((el,index) => ({nom: el.name.common,flag: el.flags}))
     const [question, setQuestion] = useState([])
     const [comp,setComp] = useState(0)
-    const [partie,setPartie] = useState({vie:10,score:0,victoire:0,defaite:0,question:0})
+    const [partie,setPartie] = useState({score:0,victoire:0,defaite:0,question:0})
 
     function start() {
         const listeQuestion = [];
