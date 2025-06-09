@@ -372,6 +372,11 @@ footer {
     gap: 20px;
   }
 }
+@media (max-width: 425px) {
+  footer {
+    font-size: 12px;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
