@@ -5,6 +5,15 @@
 .dark
     #quiz
         color: $blanc
+        button
+            background-color: $noirClaire
+            border-radius: 5px
+            box-shadow: 0px 0px 5px rgba($noir, 0.15)
+            cursor: pointer
+            color: $blanc
+            transition: 0.2s filter
+            &:hover
+                filter: brightness(1.2)
 
 
 #quiz
@@ -12,9 +21,57 @@
     padding: 50px 100px 0px 100px
     display: flex
     flex-direction: column-reverse
+    min-height: 100vh
+    justify-content: start
+    h3
+        font-size: 3.5rem
+    .score
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 2rem 2rem 2rem 2rem
+        border: 1px solid $noir
+        margin-bottom: 2rem
+        align-items: center
+        .total
+            display: flex
+            flex-direction: column
+            gap: 1rem
     button
-        padding: 3px 20px
+        padding: 4px 20px
         background-color: $blanc
         border-radius: 5px
         box-shadow: 0px 0px 5px rgba($noir, 0.15)
         cursor: pointer
+        transition: 0.2s filter
+        &:hover
+            filter: brightness(0.8)
+
+    .questionniare
+        display: flex
+        flex-direction: column
+        .question
+            display: flex
+            justify-content: space-between
+            align-items:  center
+            .reponse
+                display: flex
+                flex-direction: column 
+                gap: 1rem
+            .divImg
+                    width: 50%
+                    height: 400px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    img
+                        width: 100%
+                        
+                        object-fit: cover
+                        aspect-ratio: 16 / 9
+    .choisi
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        justify-content: start
+        align-items: flex-start

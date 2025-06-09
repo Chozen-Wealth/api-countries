@@ -9,12 +9,12 @@ export default function Resultat({partie,setPartie,question,restart}){
         }
     },[])
     return(
-        <div>
+        <div className="choisi">
             {
                 partie.score >= (question.length/2)?
-                <p>Vous Avez gagnez</p>
+                <p>Vous Avez gagnez !!!</p>
                 :
-                <p>Vous avez perdu</p>
+                <p>Vous avez perdu !!!</p>
             }
             <button onClick={restart}>Rejouer</button>
         </div>

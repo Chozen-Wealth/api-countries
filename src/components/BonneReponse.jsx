@@ -7,7 +7,7 @@ export default function BonneReponse({partie,setPartie,question,suivant}){
     
 
     return(
-        <div>
+        <div className="choisi">
             <p>Bonne reponse !! la reponse est bien {question.bonneReponse.nom}</p>
             <button onClick={suivant}>Continuer</button>
         </div>

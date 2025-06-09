@@ -388,6 +388,9 @@ nav button:hover svg {
   background-color: rgb(59, 51, 51) !important;
   color: lightgray !important;
 }
+.dark .Home .divFiltres .divSelectFav > button:hover {
+  filter: brightness(1.2);
+}
 .dark .Home select {
   background-color: rgb(59, 51, 51);
   color: lightgray;
@@ -433,19 +436,86 @@ nav button:hover svg {
 .dark #quiz {
   color: rgb(255, 255, 255);
 }
+.dark #quiz button {
+  background-color: rgb(59, 51, 51);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: 0.2s filter;
+}
+.dark #quiz button:hover {
+  filter: brightness(1.2);
+}
 
 #quiz {
   color: rgb(0, 0, 0);
   padding: 50px 100px 0px 100px;
   display: flex;
   flex-direction: column-reverse;
+  min-height: 100vh;
+  justify-content: start;
+}
+#quiz h3 {
+  font-size: 3.5rem;
+}
+#quiz .score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 2rem 2rem 2rem;
+  border: 1px solid rgb(0, 0, 0);
+  margin-bottom: 2rem;
+  align-items: center;
+}
+#quiz .score .total {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 #quiz button {
-  padding: 3px 20px;
+  padding: 4px 20px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  transition: 0.2s filter;
+}
+#quiz button:hover {
+  filter: brightness(0.8);
+}
+#quiz .questionniare {
+  display: flex;
+  flex-direction: column;
+}
+#quiz .questionniare .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#quiz .questionniare .question .reponse {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#quiz .questionniare .question .divImg {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#quiz .questionniare .question .divImg img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+#quiz .choisi {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+  align-items: flex-start;
 }
 
 /*# sourceMappingURL=index.css.map */
