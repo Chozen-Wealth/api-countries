@@ -278,15 +278,24 @@ footer
         padding: 5%
         padding-top: 50px
         padding-bottom: 100px
+    .Favoris
+        padding: 5%
+        padding-top: 50px
+        padding-bottom: 100px
 
 @media (max-width:1400px)
-    .allPays
-            width: 100%
-            display: grid
-            justify-content: space-between
-            grid-template-columns: repeat(3, 300px) !important
-            grid-template-rows: repeat(auto-fit, 375px)
-            gap: 20px
+    .Home
+        .allPays
+                width: 100%
+                display: grid
+                justify-content: space-between
+                grid-template-columns: repeat(3, 300px) !important
+                grid-template-rows: repeat(auto-fit, 375px)
+                gap: 20px
+    .Favoris
+        .listeFavoris
+            grid-template-columns: repeat(3, 300px)
+            
     
 
 @media (max-width:1040px)
@@ -298,6 +307,10 @@ footer
             grid-template-columns: repeat(2, 300px) !important
             grid-template-rows: repeat(auto-fit, 375px)
             gap: 20px
+    .Favoris
+        .listeFavoris
+            grid-template-columns: repeat(2, 300px)
+            justify-content: space-around
     .divFiltres
         width: 100%
         display: flex
@@ -339,6 +352,10 @@ footer
             grid-template-columns: repeat(1, 300px) !important
             grid-template-rows: repeat(auto-fit, 375px)
             gap: 20px
+    .Favoris
+        .listeFavoris
+            grid-template-columns: repeat(1, 300px)
+            justify-content: center
     
 @media (max-width:425px)
     footer
