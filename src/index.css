@@ -500,7 +500,7 @@ nav button:hover svg {
 }
 #quiz .questionniare .question .divImg {
   width: 50%;
-  height: 400px;
+  aspect-ratio: 16/9;
   display: flex;
   justify-content: center;
   align-items: center;

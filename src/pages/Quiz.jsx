@@ -5,7 +5,7 @@ import MauvaiseReponse from "../components/MauvaiseReponse";
 import Resultat from "../components/resultat";
 
 export default function Quiz({data}){
-    console.log(data&&data);
+    // console.log(data&&data);
     
     const listePays = data?.map((el) => ({nom: el.name.official,flag: el.flags}))
     const [question, setQuestion] = useState([])
