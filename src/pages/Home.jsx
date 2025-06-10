@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "../components/Card";
 import { Link, useNavigate } from "react-router-dom"
+import CardLoader from "../components/CardLoader";
 
 
 export default function Home({data, setData, favoris, setFavoris}) {
@@ -41,7 +42,14 @@ export default function Home({data, setData, favoris, setFavoris}) {
             <div className="allPays">
                 {data ? (dataFiltre.map(element => (
                     <Card key={element.cca3} cca3={element.cca3} drapeau={element.flags.png} pays={element.name.common} population={element.population} region={element.region} capital={element.capital} favoris={favoris} setFavoris={setFavoris} drapeauAlt={element.flags.alt} />
-                ))) : "Loading..."}
+                ))) : (
+                    <>
+                    <CardLoader />
+                    <CardLoader />
+                    <CardLoader />
+                    <CardLoader />
+                    </>
+                )}
             </div>
         </div>
     )
