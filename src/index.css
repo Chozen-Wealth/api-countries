@@ -156,13 +156,15 @@ body {
 }
 
 #details {
-  padding: 50px 100px 0px 100px;
-  height: calc(100vh - 90px);
+  padding: 50px 100px 50px 100px;
+  min-height: calc(100vh - 90px);
 }
 #details .map {
-  width: 47%;
+  width: 100%;
   padding-top: 2rem;
   border-radius: 20px;
+  margin-top: 50px;
+  height: fit-content;
 }
 #details .map iframe {
   border-radius: 12px;
@@ -185,6 +187,9 @@ body {
   align-items: center;
   gap: 5px;
   cursor: pointer;
+}
+#details .divRetour button:hover {
+  filter: brightness(0.8);
 }
 #details .divRetour button svg {
   transform: scaleY(80%);
@@ -251,6 +256,9 @@ body {
   border: none;
   cursor: pointer;
 }
+#details .divDetails .divDetailsInfos .divBorders .btnBorders:hover {
+  filter: brightness(0.8);
+}
 
 .Favoris {
   padding: 50px 100px 50px 100px;
@@ -294,6 +302,149 @@ footer {
   color: gray;
 }
 
+@media (max-width: 1460px) {
+  .Home {
+    padding: 5%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  .Favoris {
+    padding: 5%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  #details {
+    padding: 5%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 1400px) {
+  .Home .allPays {
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 300px) !important;
+    grid-template-rows: repeat(auto-fit, 375px);
+    gap: 20px;
+  }
+  .Favoris .listeFavoris {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+@media (max-width: 1040px) {
+  .Home .allPays {
+    width: 100%;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 300px) !important;
+    grid-template-rows: repeat(auto-fit, 375px);
+    gap: 20px;
+  }
+  .Favoris .listeFavoris {
+    grid-template-columns: repeat(2, 300px);
+    justify-content: space-around;
+  }
+  .divFiltres {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    gap: 10px;
+  }
+  .divFiltres .divInput {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 10px;
+    height: 70px;
+    width: 100% !important;
+  }
+  .divFiltres .divInput svg {
+    fill: rgba(0, 0, 0, 0.5);
+  }
+  .divFiltres .divInput input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  .divFiltres .divInput input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  #details .divDetails {
+    flex-direction: column;
+  }
+  #details .divDetails .divImg {
+    width: 100%;
+    height: fit-content;
+  }
+  #details .divDetails .divDetailsInfos {
+    width: 100%;
+    gap: 10px;
+  }
+  #details .divDetails .divDetailsInfos .detailsInfos {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  #details .divDetails .divDetailsInfos .detailsInfos .detailsInfosDroite .currenciesDetails {
+    display: flex;
+    gap: 10px;
+  }
+  #details .divDetails .divDetailsInfos .detailsInfos .detailsInfosDroite .langueDetails {
+    display: flex;
+    gap: 10px;
+  }
+  #details .divDetails .divDetailsInfos .detailsInfos .detailsInfosDroite li {
+    list-style: none;
+  }
+  #details .divDetails .divDetailsInfos .divBorders {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  #details .divDetails .divDetailsInfos .divBorders .btnBorders {
+    padding: 3px 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+  }
+  #details .divDetails .divDetailsInfos .divBorders .btnBorders:hover {
+    filter: brightness(0.8);
+  }
+}
+@media (max-width: 690px) {
+  .Home .allPays {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 300px) !important;
+    grid-template-rows: repeat(auto-fit, 375px);
+    gap: 20px;
+  }
+  .Favoris .listeFavoris {
+    grid-template-columns: repeat(1, 300px);
+    justify-content: center;
+  }
+}
+@media (max-width: 425px) {
+  footer {
+    font-size: 12px;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -307,6 +458,20 @@ nav span {
   font-size: 1.5rem;
   font-weight: 700;
 }
+nav .link {
+  gap: 2rem;
+  display: flex;
+}
+nav .link a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+nav .link a:hover {
+  color: gray;
+}
+nav .link a.active {
+  color: gray;
+}
 nav button {
   background: none;
   border: none;
@@ -315,8 +480,91 @@ nav button {
   gap: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+nav button:hover {
+  color: gray;
+}
+nav button:hover svg {
+  fill: gray;
+}
+nav .navDivMenu {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+nav .navDivMenu > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+nav .navDivMenu > div > svg {
+  fill: black;
+}
+nav .Menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 40px;
+  background-color: white;
+  position: fixed;
+  top: 20px;
+  right: 0px;
+  width: 200px;
+  height: 175px;
+  gap: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border-radius: 10px 0px 0px 10px;
+}
+nav .Menu .link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 50px;
+  gap: 10px;
+}
+nav .Menu > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+nav .Menu > div svg {
+  fill: black;
+}
+nav .MenuBg {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
+@media (max-width: 1040px) {
+  nav {
+    gap: 20px;
+  }
+  nav .link {
+    display: none;
+  }
+  nav .divDarkmode {
+    display: none;
+  }
+  nav .navDivMenu {
+    display: flex;
+  }
+}
 .dark {
   background-color: rgb(49, 43, 43);
 }
@@ -324,11 +572,35 @@ nav button {
   background-color: rgb(59, 51, 51);
   color: rgb(255, 255, 255);
 }
+.dark nav .link a {
+  color: rgb(255, 255, 255);
+}
+.dark nav .link a:hover {
+  color: lightgray;
+}
+.dark nav .link a.active {
+  color: lightgray;
+}
 .dark nav button {
   color: rgb(255, 255, 255);
 }
 .dark nav button svg {
   fill: rgb(255, 255, 255);
+}
+.dark nav button:hover {
+  color: lightgray;
+}
+.dark nav button:hover svg {
+  fill: lightgray;
+}
+.dark nav .navDivMenu > div > svg {
+  fill: white;
+}
+.dark nav .Menu {
+  background-color: rgb(59, 51, 51);
+}
+.dark nav .Menu > div svg {
+  fill: white;
 }
 .dark .Home .divFiltres .divInput {
   background-color: rgb(59, 51, 51);
@@ -346,6 +618,9 @@ nav button {
 .dark .Home .divFiltres .divSelectFav > button {
   background-color: rgb(59, 51, 51) !important;
   color: lightgray !important;
+}
+.dark .Home .divFiltres .divSelectFav > button:hover {
+  filter: brightness(1.2);
 }
 .dark .Home select {
   background-color: rgb(59, 51, 51);
@@ -387,6 +662,145 @@ nav button {
 }
 .dark #details .divBorders .btnBorders:hover {
   filter: brightness(1.2);
+}
+
+.dark #quiz {
+  color: rgb(255, 255, 255);
+}
+.dark #quiz .score {
+  border: 1px solid white;
+}
+.dark #quiz button {
+  background-color: rgb(59, 51, 51);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: 0.2s filter;
+}
+.dark #quiz button:hover {
+  filter: brightness(1.2);
+}
+
+#quiz {
+  color: rgb(0, 0, 0);
+  padding: 50px 100px 0px 100px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: start;
+}
+#quiz h3 {
+  font-size: 3.5rem;
+}
+#quiz .score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 2rem 2rem 2rem;
+  border: 1px solid rgb(0, 0, 0);
+  margin-bottom: 2rem;
+  align-items: center;
+}
+#quiz .score .total {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#quiz button {
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.2s filter;
+  border: none;
+}
+#quiz button:hover {
+  filter: brightness(0.8);
+}
+#quiz .questionnaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#quiz .questionnaire .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+#quiz .questionnaire .question .reponse {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#quiz .questionnaire .question .divImg {
+  width: 50%;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#quiz .questionnaire .question .divImg img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+#quiz .choisi {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 1460px) {
+  #quiz {
+    padding: 5%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 620px) {
+  #quiz h3 {
+    font-size: 2rem;
+  }
+  #quiz .score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  #quiz .score .total {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  #quiz .question {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #quiz .question .divImg {
+    width: 100% !important;
+  }
+  #quiz .question .reponse {
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+  }
+}
+@media (max-width: 430px) {
+  #quiz .score .total {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

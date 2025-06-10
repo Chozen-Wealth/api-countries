@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Details from './pages/Details'
 import Layout from './pages/Layout'
 import Favoris from './pages/Favoris'
+import Quiz from './pages/quiz'
 
 function App() {
 
@@ -19,11 +20,11 @@ function App() {
   // Importation de l'API
   useEffect(()=> {
     axios
-      .get("https://restcountries.com/v3.1/all")
+      .get("https://restcountries.com/v3.1/all?fields=name,cca3,flags,population,region,subregion,capital,currencies,languages,borders")
       .then(response => setData(response.data))
       .catch(error => console.log(error))
   },[])
-  console.log(data);
+  // console.log(data);
   
 
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route index element={<Home data={data} setData={setData} favoris={favoris} setFavoris={setFavoris} />} />
           <Route path='details/:pays' element={<Details data={data}/>} />
           <Route path='favoris' element={<Favoris data={data} favoris={favoris} setFavoris={setFavoris} />} />
+          <Route path='Quiz' element={<Quiz data={data} />} />
         </Route>
       </Routes>
     </>

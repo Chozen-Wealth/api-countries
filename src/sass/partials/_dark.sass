@@ -8,10 +8,33 @@
     nav
         background-color: $noirClaire   
         color: $blanc
+        .link
+            a
+                color: $blanc
+                &:hover
+                    color: $gris
+                &.active
+                    color: $gris
         button
             color: $blanc
             svg
                 fill: $blanc
+            &:hover
+                color: $gris
+                svg
+                    fill: $gris
+        .navDivMenu
+            
+            > div
+                
+                > svg
+                    fill: white
+        .Menu
+            
+            background-color: $noirClaire
+            > div
+                svg
+                    fill: white
 
     // Home
     .Home   
@@ -29,6 +52,8 @@
                 > button
                     background-color: $noirClaire !important
                     color: $gris !important
+                    &:hover
+                        filter: brightness(1.2)
         select
             background-color: $noirClaire
             color: $gris
